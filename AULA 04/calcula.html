@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora media</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#calculo").click(function(){
+                //abaixo: seletor+acao
+                var n1 = $("#n1").val();
+                var n2 = $("#n2").val();
+                console.log(n1);
+                console.log(n2);
+                console.log(md);
+                var md = ( parseFloat(n1) + parseFloat(n2) ) /2;
+                var html = "<p>Resultado: <span style='color:red'>";
+                html += md;
+                html += "</span></p>";
+                $("#resultado").append(html);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <p>Nota 1: <input type=number id=n1></p>
+    <p>Nota 2: <input type=number id=n2></p>
+    <p><button id=calculo>Calcular</button></p>
+    <div id=resultado></div>
+</body>
+</html>

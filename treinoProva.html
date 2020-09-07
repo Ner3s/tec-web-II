@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>TITULO</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        var soma=0, multiplicacao=0, total=0;
+
+        function somar(){
+            var n1=document.getElementById("n1");
+            var n2=document.getElementById("n2");
+            soma = parseInt(n1.value)+parseInt(n2.value)+"<br><br>";
+            document.getElementById("resultado").innerHTML=soma;
+        }
+
+        $(document).ready(function(){
+            $("#multiplicar").click(function(){
+                var n1 = $("#n1").val();//identico ao getElement
+                var n2 = $("#n2").val();
+
+                multiplicacao = parseInt(n1)*parseInt(n2)+"<br><br>";
+                $("#resultado").append(multiplicacao);
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>SIMULADOOW</h1>
+    <input type="number" id="n1" placeholder="NUMERO 1">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- ESPAÇO -->
+    <input type="number" id="n2" placeholder="NUMERO 2">
+    <br><br>
+
+    <button id="somar" onclick="somar()">Somar</button>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button id="multiplicar">Multiplicar</button>
+    <br><br>
+
+    <h2>Resultado</h2>
+    <div id="resultado" style="border: 1px solid; margin: 10px;"></div>
+
+</body>
+</html>

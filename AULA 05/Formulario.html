@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="entrada.php" method="POST">
+        
+        <fieldset name="userinfo">
+            <legend>Calculo de Notas</legend>
+            
+            <label for="idnome">Nota1</label>
+            <input type="number" required name="n1" min=0 max=10>
+            <br>
+            <label for="idaddress">Nota2</label>
+            <input type="number" required name="n2" min=0 max=10>
+            
+            <br>
+            <input type="checkbox" id="carro" name="carro"> <label for="carro">Carro</label>
+            <input type="checkbox" id="moto" name="moto"> <label for="moto">Moto</label>
+            <input type="checkbox" id="bicicleta" name="bicicleta"> <label for="bicicleta">Bicicleta</label>
+            <br>
+
+            <p>
+                <label for="cidade">Escolha uma cidade:</label>
+                <select id="cidade" name="cidade">
+                    <option value="1">São Paulo</option>
+                    <option value="2">Rio de Janeiro</option>
+                    <option value="3" selected> Bahia </option>
+                </select>
+            </p>
+            <br>
+            <input type="text" name="estado" list="nomedosestados">
+            <datalist id="nomedosestados">
+                <option value="Brasília">
+                <option value="Rio de Janeiro">
+                <option value="São Paulo">
+                <option value="Acre">            
+                <option value="Amazonas">
+            </datalist>
+            <br>
+
+            <textarea>
+                Elemento de entrada de dados que possui múltiplas linhas de colunas.
+                Exemplo de utilização:
+            </textarea>
+            <p>Digite seu comentários abaixo:<br>
+                <textarea cols="80" rols="30" name="comtarios"></textarea>
+            </p>
+
+            <p>
+                Qual é a cor da parede?
+                <input type=radio name=parede value="1"> Verde
+                <br>
+                <input type=radio name=parede value="2"> Amarelo
+                <br>
+                <input type=radio name=parede value="3"> Vermelho
+            </p>
+
+            <input type="submit" value="Calcular">
+
+        </fieldset>
+    </form>
+</body>
+</html>

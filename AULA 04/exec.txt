@@ -1,0 +1,5 @@
+NOTA 1 [    ]"input"
+NOTA 2 [    ]"input"
+	[Calcular]"Botão"
+
+Resultado:
